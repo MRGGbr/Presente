@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espero que ajude hihi</title>
+    <style>
+        body{
+            background-color: red;
+        }
+        .painel{
+            margin: auto;
+            background-color: white;
+            width: 500px;
+            height: 500px;
+            border: 2px solid rgb(255, 155, 125);
+            border-radius: 20px;
+            text-align: center;
+            padding: 50px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        #sim{
+            height: 40px;
+            width: 60px;
+            background-color:rgb(255, 155, 125);
+            border: 1px solid red;
+            border-radius: 10px;
+            color: white;
+            margin-left: -60px;
+        }
+        #nao{
+            position: absolute;
+            height: 40px;
+            width: 60px;
+            background-color: rgb(255, 155, 125);
+            border: 1px solid red;
+            border-radius: 10px;
+            color: white;
+            margin-left: 10px;
+        }
+        #gif{
+            height: 250px;
+            width: 250px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body background="imgs/OIP.jpg">
+    <div class="painel">
+        <h1> Oiii Minha Princesinhaaa!!!! </h1>
+        <img id="gif" src="imgs/Lembranças.gif" alt="Gif de lembranças">
+        <h3> Estou fazendo isso para te mostrar que te amo mt e tentar te animar um pouco, essa é minha cartinha feita a mão hihi. Funcionou?? </h3>
+        <a href="https://www.youtube.com/watch?v=A-1wqvv5Brc"><button id="sim"> SIM! </button></a>
+        <button onmouseover="fuja()" id="nao"> NÃO! </button>
+    </div>
+    <script>
+        function fuja(){
+            var botaoN = document.getElementById("nao")
+            var larguraJanela = window.innerWidth;
+            var alturaJanela = window.innerHeight;
+            var maxX = larguraJanela - botaoN.offsetWidth;
+            var maxY = alturaJanela - botaoN.offsetHeight;
+            var randomX = Math.floor(Math.random() * maxX);
+            var randomY = Math.floor(Math.random() * maxY);
+            botaoN.style.left = randomX + "px";
+            botaoN.style.top = randomY + "px";
+        }
+    </script>
+</body>
+</html>
